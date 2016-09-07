@@ -52,7 +52,5 @@ class CatsController < ApplicationController
       .permit(:age, :birth_date, :color, :description, :name, :sex)
   end
 
-  def confirm_owner
-    redirect_to cats_url unless current_user == Cat.find(params[:id]).owner
-  end
+
 end

@@ -3,6 +3,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
 
   has_many :cats
+  has_many :cat_rental_requests
 
   validates :user_name, :password_digest, presence: true
   validates :user_name, uniqueness: true
